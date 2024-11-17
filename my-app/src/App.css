@@ -21,7 +21,29 @@ ul {
   background-color: #ffffff;  flex-direction: row;
 
 } 
+/* Add bounce-in animation for the header */
+@keyframes bounceIn {
+  0% {
+    transform: scale(1.1);
+    opacity: 0.5;
+    color: #8ebee8;  
+  } 
+  70% {
+    color: #8ebee8; 
 
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1; 
+    color: white;
+
+  }
+}
+ h3{
+  color: white;  
+
+ }
+ 
 li a{
   display: block;
   color: black;
@@ -43,7 +65,7 @@ li a:visited {
 li a:hover:not(.active){
   background-color: rgb(225, 225, 225);  
   transform: scale(1.1); /* Slightly enlarge the element */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth scaling and background color transition */
+  transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 hr { background-color: white; height: 2px; border: 0; width: 60%;}
@@ -58,6 +80,7 @@ hr { background-color: white; height: 2px; border: 0; width: 60%;}
   color: white;
   overflow-y:scroll; 
   overflow-x:hidden;      
+  animation: bounceIn 0.8s ease-in-out;
 
 }
  
@@ -72,6 +95,8 @@ hr { background-color: white; height: 2px; border: 0; width: 60%;}
   font-size: 0.5em;  
   display: flex;  
   justify-content: center;
+  animation: bounceIn 1.15s ease-in-out;
+  color: white;
 
 }   
 .aboutme{
@@ -95,7 +120,20 @@ p{
 
 } 
 
-
+.worksContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.worksContainer > div {
+  width: 30rem; 
+  margin: 10px; 
+  /* border-style: solid;  */
+  border-radius: 2rem; 
+  border-width: 0.2rem;
+}
+.worksContainer img {
+  width: 95%; 
+}
 a:link {
   color: white;
 }
@@ -199,3 +237,5 @@ a:hover {
   }
 
 }
+
+

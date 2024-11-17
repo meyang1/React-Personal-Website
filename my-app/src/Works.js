@@ -2,6 +2,10 @@ import './App.css';import React from 'react';
 
 import { Link } from 'react-router-dom'; 
 import ReactDOM from 'react-dom/client';
+import marketplace from './marketplace.png';
+import regalraid from './regalraidgame.png';
+import centraltimes from './centraltimes.png';
+
 
  <style>
 </style>
@@ -49,20 +53,26 @@ function App() {
 
 
 
-        <div style={{ flexGrow: 1}} className="Name">
-        <p> uiuc marketplace</p>
-         </div>
-         <p> A hub for Illini to effortlessly buy, sell, and connect within the UIUC community.</p>
+        <div className="worksContainer">
+          <div style={{ flexGrow: 1}} >
+          <p className="Name"> uiuc marketplace</p>
+          <p> A hub for Illini to effortlessly buy, sell, and connect within the UIUC community.</p>
+          <img src={marketplace}/>
+          </div>
 
-         <div style={{ flexGrow: 1}} className="Name">
-        <p> regal raid</p>
-         </div>
-         <p> Thrilling platform for strategic battles, combining blockchain innovation with competitive gameplay.</p>
-         <div style={{ flexGrow: 1}} className="Name">
-        <p> central times</p>
-         </div>
-         <p> Mobile app bringing Central Times news to your fingertips, designed for on-the-go readers.</p>
+          <div style={{ flexGrow: 1}} >
+          <p className="Name"> central <br />times</p> 
+          <p> Mobile app bringing Central Times news to your fingertips, designed for on-the-go readers.</p>
+          <img src={centraltimes} style={{height: '33rem', width: '18rem', borderStyle: 'solid', borderColor: 'white', borderWidth: '0.4rem', borderRadius: 'rem'}}/>
 
+          </div>
+          <div style={{ flexGrow: 1}}>
+          <p className="Name"> regal  <br />raid</p>
+          <p> Thrilling platform for strategic battles, combining blockchain innovation with competitive gameplay.</p>
+          <img src={regalraid}/>
+          </div>
+ 
+         </div>
       </header>
       
     </div>
